@@ -15,7 +15,7 @@ class WaveProgress extends StatefulWidget {
 
 class WaveProgressState extends State<WaveProgress>
     with TickerProviderStateMixin {
-  AnimationController controller;
+  late AnimationController controller;
 
   @override
   void initState() {
@@ -45,7 +45,7 @@ class WaveProgressState extends State<WaveProgress>
             child: new AnimatedBuilder(
                 animation: controller,
                 builder: (BuildContext context, Widget child) {
-                  return new CustomPaint(
+                  return  CustomPaint(
                       painter: WaveProgressPainter(
                           controller,
                           widget.borderColor,
